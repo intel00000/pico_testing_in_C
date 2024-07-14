@@ -7,7 +7,7 @@
 #include "blink.pio.h"
 
 #define NUM_PIXELS 5
-#define ZIP_LED_GPIO_PIN 0
+#define ZIP_LED_GPIO_PIN 16
 #define ONBOARD_LED_PIN CYW43_WL_GPIO_LED_PIN
 
 // function to put pixel data to the PIO state machine

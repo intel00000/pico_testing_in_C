@@ -5,10 +5,10 @@
 #include "hardware/i2c.h"
 #include "hardware/adc.h"
 
-#define I2C_PORT i2c0
+#define I2C_PORT i2c1
 #define S7S_ADDRESS 0x71
-#define MY_I2C_SDA_PIN 20
-#define MY_I2C_SCL_PIN 21
+#define MY_I2C_SDA_PIN 14
+#define MY_I2C_SCL_PIN 15
 
 #define TEST_SAMPLES 100000
 #define NUM_SAMPLES 5000

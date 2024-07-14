@@ -5,9 +5,9 @@
 #include "hardware/adc.h"
 #include "SparkFun_Alphanumeric_Display.h"
 
-#define I2C_PORT i2c0
-#define MY_I2C_SDA_PIN 20
-#define MY_I2C_SCL_PIN 21
+#define I2C_PORT i2c1
+#define MY_I2C_SDA_PIN 14
+#define MY_I2C_SCL_PIN 15
 
 #define TEST_SAMPLES 100000
 #define NUM_SAMPLES 1000
@@ -61,7 +61,7 @@ void setup_i2c()
     gpio_pull_up(MY_I2C_SCL_PIN);
 
     // Initialize the display
-    if (!HT16K33_begin(&display, 0x70, DEFAULT_NOTHING_ATTACHED, DEFAULT_NOTHING_ATTACHED, DEFAULT_NOTHING_ATTACHED, i2c0))
+    if (!HT16K33_begin(&display, 0x70, DEFAULT_NOTHING_ATTACHED, DEFAULT_NOTHING_ATTACHED, DEFAULT_NOTHING_ATTACHED, I2C_PORT))
     {
         printf("Failed to initialize display\n");
         while (1)
@@ -87,7 +87,7 @@ void serial_display_setup()
     sleep_ms(1000);
     HT16K33_setBrightness(&display, 0);
     sleep_ms(1000);
-    HT16K33_setBrightness(&display, 10);
+    HT16K33_setBrightness(&display, 0);
     sleep_ms(1000);
     HT16K33_setBlinkRate(&display, 0);
     HT16K33_clear(&display);
