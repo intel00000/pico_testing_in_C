@@ -1,1 +1,1 @@
-Testing breakout board with Pi Pico with C sdk
+Testing some breakout board with Pi Pico using official C sdk under VSCode
